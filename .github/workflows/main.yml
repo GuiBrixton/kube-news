@@ -14,7 +14,7 @@ jobs:
         uses: docker/build-push-action@v5.1.0
         with:
           context: ./src
-          file: ./src/Dockerlile
+          file: ./src/Dockerfile
           push: true
           tags:
             brixtoncava/action-news:v1
