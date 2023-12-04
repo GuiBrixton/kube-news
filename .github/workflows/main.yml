@@ -17,8 +17,8 @@ jobs:
           file: ./src/Dockerlile
           push: true
           tags:
-            brixton/git-action-news:v1
-            brixton/git-action-news:latest
+            brixtoncava/action-news:v1
+            brixtoncava/action-news:latest
             
           
 
