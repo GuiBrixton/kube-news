@@ -1,0 +1,26 @@
+name: CI-CD
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  CI:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4.1.1
+      - name: contrucion de la imagen Docker
+        uses: docker/build-push-action@v5.1.0
+        with:
+          context: ./src
+          file: ./src/Dockerlile
+          push: true
+          tags:
+            brixton/gitaction:v1
+            brixton/gitaction:latest
+            
+          
+
+    
+    
