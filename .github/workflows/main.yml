@@ -4,10 +4,8 @@ on:
   push:
     branches: ["main"]
 env:
-   nombreimage1: brixtoncava
-   version1: action-news
-   nombreimage2: brixtoncava
-   version2: action-news
+   versionbase: v1
+   versionlatest: latest 
 
 jobs:
   CI:
@@ -29,8 +27,8 @@ jobs:
           file: ./src/Dockerfile
           push: true
           tags:
-            ${{ env.nombreimage1 }}/${{ env.version1 }}:v1
-            ${{ env.nombreimage2 }}/${{ env.version2 }}:latest 
+            brixtoncava/action-news:${{ env.versionbase }}
+            brixtoncava/action-news:${{ env.versionlatest }}
             
           
 
