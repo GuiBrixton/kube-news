@@ -18,7 +18,7 @@
           <form action="#" class="post-form__form" action="/post" method="post">
             <div class="post-form__group">
               <label for="" class="post-form__label">Título</label>
-              <input type="text" class="post-form__input" id="title" name="title" placeholder="Escreva o título da notícia" value="<%= post.title %>">
+              <input type="text" class="post-form__input" id="title" name="title" placeholder="Escreva el título da notícia" value="<%= post.title %>">
               <% if (valido === false) {%>
               <div class="post-form__error">
                 Este campo es obrigatório y debe tener un máximo de 30 caracteres
@@ -27,7 +27,7 @@
             </div>
             <div class="post-form__group">
               <label for="" class="post-form__label">Resumo</label>
-              <input type="text" class="post-form__input" id="resumo" name="resumo" placeholder="Escreva o resumo da notícia" value="<%= post.summary %>">
+              <input type="text" class="post-form__input" id="resumo" name="resumo" placeholder="Escribe un resumen de la historia" value="<%= post.summary %>">
               <% if (valido === false) {%>
               <div class="post-form__error">
                 Este campo es obrigatório y debe tener un máximo de 30 caracteres
@@ -36,7 +36,7 @@
             </div>
             <div class="post-form__group">
               <label for="" class="post-form__label">Notícias</label>
-              <textarea class="post-form__textarea" id="description" name="description" cols="30" rows="10" placeholder="Escreva a sua notícia..."><%= post.content %></textarea>
+              <textarea class="post-form__textarea" id="description" name="description" cols="30" rows="10" placeholder="Escreva tu  notícia..."><%= post.content %></textarea>
               <% if (valido === false) {%>
               <div class="post-form__error">
                 Este campo es obrigatório y debe tener un máximo de 30 caracteres
