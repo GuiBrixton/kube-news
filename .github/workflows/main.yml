@@ -37,8 +37,12 @@ jobs:
         with:
           method: kubeconfig
           kubeconfig: ${{ secrets.K8S_CONFIG}}
-                         
-          
+      - name: Deploy apps a Kubernetes cluster
+        uses: Azure/k8s-deploy@v4.9
+        with:
+          images:  ${{env.reponamedocker}}/action-news:${{github.run_number}}           
+          manifests:
+            K8S/deployment.yaml
 
     
     
