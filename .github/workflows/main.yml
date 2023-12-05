@@ -33,7 +33,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4.1.1
       - name: Definiendo el contexto
-        uses: Azure/aks-set-context@v3
+        uses: Azure/k8s-set-context@v3.0
         with:
           method: kubeconfig
           kubeconfig: ${{ secrets.K8S_CONFIG}}
