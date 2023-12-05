@@ -27,6 +27,16 @@ jobs:
           push: true
           tags:
              ${{env.reponamedocker}}/action-news:${{github.run_number}}
+  CD:
+    runs-on: ubuntu-latest
+    needs: [CI]
+    steps:
+      - uses: actions/checkout@v4.1.1
+      - name: Definiendo el contexto
+        uses: Azure/aks-set-context@v3
+        with:
+          method: kubeconfig
+          kubeconfig: ${{ secrets.K8S_CONFIG}}
                          
           
 
