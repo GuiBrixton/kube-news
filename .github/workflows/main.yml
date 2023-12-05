@@ -3,6 +3,11 @@ name: CI-CD
 on:
   push:
     branches: ["main"]
+env:
+   nombreimage1: brixtoncava
+   version1: action-news
+   nombreimage2: brixtoncava
+   version2: action-news
 
 jobs:
   CI:
@@ -24,8 +29,8 @@ jobs:
           file: ./src/Dockerfile
           push: true
           tags:
-            brixtoncava/action-news:v1
-            brixtoncava/action-news:latest
+            ${{ env.nombreimage1 }}/${{ env.version1 }}:v1
+            ${{ env.nombreimage2 }}/${{ env.version2 }}:latest 
             
           
 
