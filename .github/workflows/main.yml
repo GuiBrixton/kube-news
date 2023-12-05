@@ -26,7 +26,7 @@ jobs:
           file: ./src/Dockerfile
           push: true
           tags:
-             ${{env.reponamedocker}}/gitAction-news:${{github.run_number}}
+             ${{env.reponamedocker}}/action-news:${{github.run_number}}
                          
           
 
