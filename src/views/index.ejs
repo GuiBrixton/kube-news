@@ -20,7 +20,7 @@
             <div class="no-posts__image">
                 <img src="/img/no-posts.gif" alt="Nenhum post">
             </div>
-            <h1 class="no-posts__message">Ainda não temos nenhum post, que tal você criar um?</h1>
+            <h1 class="no-posts__message">Aún no tenemos post, ¿por qué no creas uno?</h1>
             <a class="no-posts__button" href="/post">Novo Post</a>
         </div>
         <% } else { %>
@@ -32,7 +32,7 @@
                             <span class="post__card__date"><%= posts[i].publishDate %></span>
                             <h4 class="post__card__title"><%= posts[i].title %></h4>
                             <p class="post__card__description"><%= posts[i].summary %></p>
-                            <button class="post__card__button" onclick="location.href='/post/<%= posts[i].id %>';">Saiba Mais</button>
+                            <button class="post__card__button" onclick="location.href='/post/<%= posts[i].id %>';">echas un Ojo</button>
                         </div>
                     </div>
                     <% } %>                    
