@@ -5,7 +5,7 @@ on:
     branches: ["main"]
 env:
    versionbase: latest
-   
+   reponamedocker: brixtondevops
 jobs:
   CI:
     runs-on: ubuntu-latest
@@ -26,7 +26,7 @@ jobs:
           file: ./src/Dockerfile
           push: true
           tags:
-             ${{ secrets.DOCKER_USERNAME }}/gitAction-news:${{github.run_number}}
+             ${{env.reponamedocker}}/gitAction-news:${{github.run_number}}
                          
           
 
