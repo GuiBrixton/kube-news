@@ -25,7 +25,9 @@ jobs:
           context: ./src
           file: ./src/Dockerfile
           push: true
-          tags: brixtoncava/action-news:${{ env.versionbase }}            
+          tags:
+             brixtoncava/action-news:${{github.run_number}}
+             brixtoncava/action-news:${{env.versionbase}}              
           
 
     
