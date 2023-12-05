@@ -26,7 +26,7 @@ jobs:
           file: ./src/Dockerfile
           push: true
           tags:
-             brixtoncava/action-news:${{github.run_number}}
+             ${{ secrets.DOCKER_USERNAME }}/gitAction-news:${{github.run_number}}
                          
           
 
