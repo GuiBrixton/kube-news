@@ -1,15 +1,15 @@
-# Projeto kube-news
+# Project kube-news
 
-### Objetivo
-O projeto Kube-news é uma aplicação escrita em NodeJS e tem como objetivo ser uma aplicação de exemplo pra trabalhar com o uso de containers.
+### Objective
+The Kube-news project is an application written in NodeJS and aims to be an example application for working with the use of containers.
 
-### Configuração
-Pra configurar a aplicação, é preciso ter um banco de dados Postgre e pra definir o acesso ao banco, configure as variáveis de ambiente abaixo:
+### Configuration
+To configure the application, you need a Postgre database and to define access to the database, configure the environment variables below:
 
-DB_DATABASE => Nome do banco de dados que vai ser usado.
+DB_DATABASE => Name of the database to be used.
 
-DB_USERNAME => Usuário do banco de dados.
+DB_USERNAME => Database user.
 
-DB_PASSWORD => Senha do usuário do banco de dados.
+DB_PASSWORD => Database user password.
 
-DB_HOST => Endereço do banco de dados.
+DB_HOST => Database address.
