@@ -8,7 +8,7 @@ env:
    reponamedocker: brixtondevops
 jobs:
   CI:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, windows]
 
     steps:
       - uses: actions/checkout@v4.1.1
@@ -19,7 +19,7 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
           
-      - name: contrucion de la imagen Docker
+      - name: construcion de la imagen Docker
         uses: docker/build-push-action@v5.1.0
         with:
           context: ./src
@@ -28,7 +28,7 @@ jobs:
           tags:
              ${{env.reponamedocker}}/action-news:${{github.run_number}}
   CD:
-    runs-on: ubuntu-latest
+    runs-on:  [self-hosted, windows]
     needs: [CI]
     steps:
       - uses: actions/checkout@v4.1.1
