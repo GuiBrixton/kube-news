@@ -2,7 +2,7 @@ name: BUILD-IMAGEN-DOCKER
 
 on:
   push:
-    branches: ["develop"]
+    branches: ["main"]
 env:
    versionbase: latest
    reponamedocker: arch-plat-devops-image
