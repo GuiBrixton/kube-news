@@ -8,7 +8,7 @@ env:
    reponamedocker: arch-plat-devops-image
 jobs:
   BUILD-IMAGE:
-    runs-on: [self-hosted, x64, Windows, devops01]
+    runs-on: [self-hosted, x64, Linux, buildimage]
 
     steps:
       - uses: actions/checkout@v4.1.1
