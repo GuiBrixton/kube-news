@@ -8,7 +8,7 @@ env:
    reponamedocker: arch-plat-devops-image
 jobs:
   BUILD-IMAGE:
-    runs-on: [self-hosted, x64, Linux, buildimage]
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4.1.1
@@ -26,4 +26,4 @@ jobs:
           file: ./src/Dockerfile
           push: true
           tags:
-             ${{env.reponamedocker}}/imagesjk:${{github.run_number}}
+             ${{env.reponamedocker}}/jenkinsjdk:${{github.run_number}}
