@@ -23,7 +23,7 @@ jobs:
         uses: docker/build-push-action@v5.1.0
         with:
           context: ./src
-          file: ./src/Dockerfile
+          file: ./src/Dockerfilejk
           push: true
           tags:
-             ${{env.reponamedocker}}/jenkinsjdk:${{github.run_number}}
+             ${{env.reponamedocker}}/jenkinsjdk11:${{github.run_number}}
