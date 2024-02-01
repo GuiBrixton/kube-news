@@ -5,7 +5,7 @@ on:
     branches: ["develop"]
 env:
    versionbase: latest
-   reponamedocker: getting-started
+   reponamedocker: brixtondevops
 jobs:
   BUILD-IMAGE:
     runs-on: ubuntu-latest
