@@ -8,7 +8,7 @@ env:
    reponamedocker: brixtondevops
 jobs:
   BUILD-IMAGE:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, x64, Linux, buildimage]
 
     steps:
       - uses: actions/checkout@v4.1.1
