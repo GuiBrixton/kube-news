@@ -9,9 +9,11 @@ env:
 jobs:
   BUILD-IMAGE:
     runs-on: ubuntu-latest
-     permissions:
+    # Asignamos los permisos sobre los recursos de GitHub
+    permissions:
       contents: read
       packages: write
+
     steps:
       - uses: actions/checkout@v4.1.1
      
