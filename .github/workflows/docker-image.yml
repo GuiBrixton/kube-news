@@ -3,7 +3,7 @@ name: BUILDIMAGE
 on:
   push:
     branches:
-      - 'feature/gui'
+      - 'develop'
 env:
     nombredeimagen: dockerio
     version: latest 
