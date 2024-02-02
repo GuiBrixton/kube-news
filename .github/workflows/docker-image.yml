@@ -28,4 +28,4 @@ jobs:
        
     - name: Build Docker image 
       run: |
-        docker build -t ${{nombredeimagen}}:${{version}} ./src
+        docker build -t ${{env.nombredeimagen}}:${{env.version}} ./src
