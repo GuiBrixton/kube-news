@@ -9,7 +9,7 @@ env:
     version: latest 
 jobs:
   BUILDIMAGE:
-    runs-on: ubuntu-latest
+    runs-on:  [self-hosted, x64, Linux, images]
 
     steps:
     - name: Checkout repository
