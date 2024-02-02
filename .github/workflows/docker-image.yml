@@ -1,0 +1,31 @@
+name: BUILDIMAGE
+
+on:
+  push:
+    branches:
+      - 'feature/gui'
+env:
+    nombredeimagen: dockerio
+    version: latest 
+jobs:
+  BUILDIMAGE:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Install Azure CLI
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y azure-cli
+    
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v3
+      with:
+        dockerfile: Dockerfile
+        context: ./runner
+       
+    - name: Build Docker image 
+      run: |
+        docker build -t ${{nombredeimagen}}:${{version}} ./runner
